@@ -17,8 +17,11 @@ jobs:
           env:
             SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEYS }}
             SOURCE: "./"
-            REMOTE_HOsTS: ${{ secrets.REMOTE_HOST }}
-            REMOTE_HOsTS: ${{ secrets.REMOTE_HOST }}
+            REMOTE_HOSTS: ${{ secrets.REMOTE_HOST }}
+            REMOTE_HOSTS: ${{ secrets.REMOTE_HOST }}
+            TARGET:"/home/ec2-user/"
+            -name: Install Dependencies
+            run: pip3 install -r requirements.txt
             
             
             
